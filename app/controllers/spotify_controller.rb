@@ -3,7 +3,7 @@ class SpotifyController < ApplicationController
 	def index
 		if params[:year]
 			year = params[:year]
-			response = HTTParty.get("https://api.spotify.com//v1/browse/new-releases+year=#{year})
+			response = HTTParty.get("https://api.spotify.com//v1/browse/new-releases+year=#{year}")
 			results = JSON.parse(response.body)
 			@results = results['year']
 		else
@@ -12,5 +12,6 @@ class SpotifyController < ApplicationController
 	end
 
 	def show
+
 	end
 end
