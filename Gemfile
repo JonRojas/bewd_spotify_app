@@ -45,3 +45,4 @@ end
 
 gem 'httparty'
 gem 'pry-rails'
+

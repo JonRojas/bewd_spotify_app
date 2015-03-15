@@ -4,3 +4,11 @@
 	<label>Year <em>(four digits please!)</em>:<input name="year"></label>
 	<button>Submit</button>
 </form>
+
+
+<ul>
+
+	<% @results.each do |result| %>
+		<li><a href="/spotify/<%= result['id'] %>"><%= result['playlists.name'] %></a></li>
+	<% end %>
+</ul>
