@@ -8,7 +8,8 @@
 
 <ul>
 
-	<% @results.each do |result| %>
-		<li><a href="/spotify/<%= result['id'] %>"><%= result['playlists.name'] %></a></li>
-	<% end %>
+	<ul>
+			<% @playlists.each do |p| %>
+				<li><%= result[:name] %></li>
+			<% end %>
 </ul>
