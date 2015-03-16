@@ -5,13 +5,10 @@ class SpotifyController < ApplicationController
 			year = params[:year]
 			response = HTTParty.get("https://api.spotify.com/v1/search?type=playlist&q=#{year}")
 			results = JSON.parse(response.body)
-			playlists = results['playlists'] ['items'] ['name'] #array of the playlists
-			#@playlists = results[:name]
-
-			end
-			
+			@playlists = results['playlists'] ['items'] #array of the playlists
 		else
 			@playlists = []
+		end
 	end
 		
 

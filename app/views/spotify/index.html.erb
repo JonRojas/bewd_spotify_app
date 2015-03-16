@@ -10,6 +10,6 @@
 
 	<ul>
 			<% @playlists.each do |p| %>
-				<li><%= result[:name] %></li>
+				<li><a href="/spotify/<%= p['id'] %>"><%= p['name'] %></a></li>
 			<% end %>
 </ul>
